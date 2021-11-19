@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
 
 
 const App=() => {
   return (
     <div >
-      <h1>B_code</h1>
+      <Header title="Images gallery"/>
     </div>
   );
 }
