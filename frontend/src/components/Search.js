@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button , Form } from "react-bootstrap";
 
-const Search = ( {handleSubmit}) => {
+const Search = ( {word, setWord, handleSubmit}) => {
   return (
     <Container className="mt-4">
       <Row className="justify-content-center">
@@ -9,7 +9,12 @@ const Search = ( {handleSubmit}) => {
           <Form onSubmit={handleSubmit}>
             <Row>
               <Col xs={9}>
-                <Form.Control placeholder="Search for new Image..." />
+                <Form.Control 
+                   type="text"
+                   value={word}
+                   onChange={(e) => setWord(e.target.value)} 
+                   placeholder="Search for new Image..." 
+                />
               </Col>
               <Col>
                  <Button variant="primary" type="submit">Search</Button>

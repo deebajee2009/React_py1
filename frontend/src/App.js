@@ -1,22 +1,22 @@
-import React,{ useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Search from './components/Search';
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import Search from "./components/Search";
 
-function handleSearchSubmit(e) {
-  e.preventDefault();
-  console.log(e.target[0].value);
+const App = () => {
+  const [word, setWord] = useState("");
+  function handleSearchSubmit(e) {
+    e.preventDefault();
+    console.log(word);
+  }
+  
 
-
-}
-
-const App=() => {
   return (
-    <div >
-      <Header  title="Images gallery"/>
-      <Search  handleSubmit={handleSearchSubmit} />
+    <div>
+      <Header title="Images gallery" />
+      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
     </div>
   );
-}
+};
 
 export default App;
