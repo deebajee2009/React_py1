@@ -9,7 +9,7 @@ const App = () => {
     e.preventDefault();
     console.log(word);
   }
-  
+  console.log(process.env)
 
   return (
     <div>
